@@ -27,9 +27,44 @@ void twoVars(){
 	
 }
 
+void varAndPointers(){
+	
+	int a = 10;
+	
+	printf("\nvalue of 'a' is %d", a);
+	
+	printf("\n Address of 'a' is %d", &a);
+	
+	int b = 6;
+	
+	printf("\nvalue of 'b' is %d", b);
+	
+	printf("\n Address of  'b' is %d", &b);
+	
+	int *mypointer;
+	
+	printf("\n Address of  'mypointer' is %d", &mypointer);
+	
+	//Points to address of 'a'
+	mypointer = &a;
+	
+	printf("\nValue of 'mypointer' is %d", mypointer);
+	
+	///Get the value pointed
+	printf("\nValue inside the address \nhosted by 'mypointer' (*mypointer) is %d", *mypointer);
+	
+	//Change the value of another variable
+	
+	*mypointer = 40000;
+	printf("\n After *mypointer, value of 'a' is %d", a);
+	
+		
+}
+
 int main(int argc, char **argv)
 {
 	printf("TD 2 Pointers\n");
-	twoVars();
+	//twoVars();
+	varAndPointers();
 	return 0;
 }
