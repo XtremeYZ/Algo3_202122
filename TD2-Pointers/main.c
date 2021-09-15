@@ -70,11 +70,27 @@ void varAndPointers(){
 	
 		
 }
+//It receives two addresses
+void permute(int * a, int * b){
+	//Swap the values hosted in the two addresses
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+	
+}
 
 int main(int argc, char **argv)
 {
 	printf("TD 2 Pointers\n");
 	//twoVars();
-	varAndPointers();
+	//varAndPointers();
+	
+	int value1 = 10;
+	int value2 = 15;
+	printf("\nValue of value1 %d, value2: %d before", value1,value2);
+	permute(&value1, &value2);
+	
+	printf("\nValue of value1 %d, value2: %d after", value1,value2);
+	
 	return 0;
 }
