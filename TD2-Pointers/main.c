@@ -58,6 +58,16 @@ void varAndPointers(){
 	*mypointer = 40000;
 	printf("\n After *mypointer, value of 'a' is %d", a);
 	
+	
+	// change the value of B only with my pointer (targets to 'a')
+	
+	//Changing 4 bytes after la valuer du pointer
+	*(mypointer - 1)  =  55; // + sizeof(int)
+	printf("\nchanging value %d", mypointer - 1);
+	printf("\nValue of 'b' after pointer modification %d",b );
+	//Changing another place...
+	*(mypointer + 200)  =  155;
+	
 		
 }
 
