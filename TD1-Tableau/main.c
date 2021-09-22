@@ -1,7 +1,17 @@
 #include <stdio.h>
 # define N 10
 
-void saisieTableau(int tab[]){
+typedef int ARRAY[N];
+
+void initTableau(/*int tab[]/*ARRAY tab){
+
+	for(int i=0; i < N; i++){
+			tab[i] = 0;
+	}
+	
+}
+
+void saisieTableau(/*int tab[]*/ARRAY tab){
 
 	for(int i=0; i < N; i++){
 			printf("Enter value for position %d\n",i);
@@ -10,7 +20,7 @@ void saisieTableau(int tab[]){
 	
 }
 
-void afficherTableau(int tab[]){
+void afficherTableau(/*int tab[]*/ARRAY tab){
 	for(int i=0; i< N; i++){
 		printf("at position %d, value %d\n",i, tab[i]);
 		}
@@ -24,10 +34,13 @@ int main(int argc, char **argv)
 	//printf("Value of N: %d", N);
 	
 	int mytab[N];
+	initTableau(mytab);
+	//saisieTableau(mytab);
+	//afficherTableau(mytab);
 	
-	saisieTableau(mytab);
-	
-	afficherTableau(mytab);
+	ARRAY mynewArray;
+	saisieTableau(mynewArray);
+	afficherTableau(mynewArray);
 	
 	return 0;
 }
