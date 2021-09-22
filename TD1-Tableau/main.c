@@ -4,7 +4,8 @@
 void saisieTableau(int tab[]){
 
 	for(int i=0; i < N; i++){
-			tab[i] = 45;
+			printf("Enter value for position %d\n",i);
+			scanf("%d", &tab[i]);
 	}
 	
 }
